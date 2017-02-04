@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/video_5"
+        app:showAsAction="ifRoom|withText"
+        android:title="5秒"
+        android:visible="true"/>
+    <item
+        android:id="@+id/video_10"
+        app:showAsAction="ifRoom|withText"
+        android:title="10秒"
+        android:visible="true"/>
+    <item
+        android:id="@+id/video_15"
+        app:showAsAction="ifRoom|withText"
+        android:title="15秒"
+        android:visible="true"/>
+</menu>

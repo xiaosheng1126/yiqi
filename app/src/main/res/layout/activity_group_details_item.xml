@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        android:id="@id/ivPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/image_round_4dp"/>
+
+    <ImageView
+        android:id="@+id/ivPersionIcon"
+        android:layout_toRightOf="@id/ivPhoto"
+        android:layout_marginLeft="-10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/yun_100"/>
+
+    <TextView
+        android:id="@id/tvName"
+        android:layout_alignLeft="@id/ivPhoto"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_313131"
+        android:singleLine="true"
+        tools:text="占三"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/ivPhoto"/>
+
+    <FrameLayout
+        android:id="@+id/flOperation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/add_bg">
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_gravity="center"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/icon_24_plus_p" />
+    </FrameLayout>
+
+
+</RelativeLayout>

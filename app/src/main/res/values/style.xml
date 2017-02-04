@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tab_rb_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:textColor">@drawable/tab_selector</item>
+    </style>
+
+    <!--图片加载主样式-->
+    <style name="base_image_style">
+        <!--加载图片比例类型-->
+        <item name="actualImageScaleType">focusCrop</item>
+        <!--占位图比例类型-->
+        <item name="placeholderImageScaleType">fitCenter</item>
+        <!--加载失败图比例类型-->
+        <item name="failureImageScaleType">centerInside</item>
+        <!--加载重试图比例类型-->
+        <item name="retryImageScaleType">centerCrop</item>
+        <!--加载时缓冲图比例类型-->
+        <item name="progressBarImageScaleType">centerInside</item>
+        <!--占位图比例类型-->
+        <item name="progressBarAutoRotateInterval">1000</item>
+    </style>
+
+    <!--图片加载主样式-->
+    <style name="photo_image_style" parent="base_image_style">
+        <!--占位图-->
+        <item name="placeholderImage">@mipmap/default_person</item>
+        <!--加载失败图-->
+        <item name="failureImage">@mipmap/default_person</item>
+    </style>
+
+    <!--4dp的圆角图片加载样式-->
+    <style name="image_round_2dp" parent="photo_image_style">
+        <item name="roundBottomLeft">true</item>
+        <item name="roundBottomRight">true</item>
+        <item name="roundTopLeft">true</item>
+        <item name="roundTopRight">true</item>
+        <item name="roundedCornerRadius">2dp</item>
+    </style>
+
+    <!--4dp的圆角图片加载样式-->
+    <style name="image_round_4dp" parent="photo_image_style">
+        <item name="roundBottomLeft">true</item>
+        <item name="roundBottomRight">true</item>
+        <item name="roundTopLeft">true</item>
+        <item name="roundTopRight">true</item>
+        <item name="roundedCornerRadius">4dp</item>
+    </style>
+
+    <style name="circle_photo" parent="photo_image_style">
+        <item name="roundAsCircle">true</item>
+        <item name="roundingBorderWidth">1dp</item>
+        <item name="roundingBorderColor">@color/color_1E90FF</item>
+    </style>
+
+    <!--ChatActivity-->
+    <!--聊天界面时间控件的style-->
+    <style name="chat_time_style">
+        <item name="android:id">@id/tvTime</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/chat_time_bg</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!--聊天界面Item根布局的style-->
+    <style name="chat_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="chat_system_style">
+        <item name="android:id">@id/tvText</item>
+        <item name="android:layout_below">@id/tvTime</item>
+        <item name="android:background">@drawable/chat_time_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="chat_item_name_right" parent="chat_item_name">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_toLeftOf">@id/ivPhoto</item>
+    </style>
+
+    <style name="chat_photo_style_right" parent="chat_photo_style">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="chat_photo_style_left" parent="chat_photo_style">
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="chat_item_name">
+        <item name="android:id">@id/tvName</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxWidth">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#959595</item>
+        <item name="android:layout_alignTop">@id/ivPhoto</item>
+    </style>
+
+    <style name="chat_item_name_left" parent="chat_item_name">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_toRightOf">@id/ivPhoto</item>
+    </style>
+
+    <!--聊天界面头像控件的style-->
+    <style name="chat_photo_style" parent="image_round_4dp">
+        <item name="android:id">@id/ivPhoto</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_below">@id/tvTime</item>
+    </style>
+
+    <!--聊天界面文字控件展示的style-->
+    <style name="chat_text_style">
+        <item name="android:id">@id/tvText</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#4a4a4a</item>
+        <item name="android:autoLink">web|phone|email</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
+
+    <!--聊天界面图片内容展示的style-->
+    <style name="chat_text_content_style">
+        <item name="android:id">@id/rlItem</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="chat_audio_content_style">
+        <item name="android:id">@id/rlItem</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="chat_text_content_style_right" parent="chat_text_content_style">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:layout_alignRight">@id/tvName</item>
+        <item name="android:background">@drawable/chat_send_item_sel</item>
+    </style>
+
+    <style name="chat_audio_style_right" parent="chat_audio_content_style">
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:layout_alignRight">@id/tvName</item>
+    </style>
+
+    <style name="chat_audio_style_left" parent="chat_audio_content_style">
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:layout_alignLeft">@id/tvName</item>
+    </style>
+
+    <style name="chat_text_content_style_left" parent="chat_text_content_style">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:layout_alignLeft">@id/tvName</item>
+        <item name="android:background">@drawable/chat_receive_item_sel</item>
+    </style>
+
+    <!--聊天界面图片控件展示的style-->
+    <style name="chat_pic_style" parent="pic_round_2dp">
+        <item name="android:id">@id/ivPic</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="chat_pic_content_style_right" parent="chat_pic_content_style">
+        <item name="android:layout_alignRight">@id/tvName</item>
+        <item name="android:background">@drawable/chat_send_item_sel</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <!--聊天界面图片内容展示的style-->
+    <style name="chat_pic_content_style">
+        <item name="android:id">@id/rlItem</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <!--图片加载主样式-->
+    <style name="pic_image_style" parent="base_image_style">
+        <!--占位图-->
+        <item name="placeholderImage">@mipmap/default_pic</item>
+        <!--加载失败图-->
+        <item name="failureImage">@mipmap/default_pic</item>
+    </style>
+
+
+
+    <!--4dp的圆角图片加载样式-->
+    <style name="pic_round_2dp" parent="pic_image_style">
+        <item name="roundBottomLeft">true</item>
+        <item name="roundBottomRight">true</item>
+        <item name="roundTopLeft">true</item>
+        <item name="roundTopRight">true</item>
+        <item name="roundedCornerRadius">2dp</item>
+    </style>
+
+    <style name="chat_pic_content_style_left" parent="chat_pic_content_style">
+        <item name="android:layout_alignLeft">@id/tvName</item>
+        <item name="android:background">@drawable/chat_receive_item_sel</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+    <style name="chat_details_item_style">
+        <item name="android:textColor">#313131</item>
+        <item name="android:background">@color/color_ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:drawableRight">@mipmap/icon_arrow</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+
+    <style name="dialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_dismiss</item>
+    </style>
+
+
+    <style name="chat_item_send">
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_below">@id/tvName</item>
+        <item name="android:layout_alignRight">@id/tvName</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="chat_pb_style" parent="@android:style/Widget.Material.ProgressBar.Small">
+        <item name="android:id">@id/pb</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <style name="chat_resend_style">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:src">@mipmap/icon_24_warning</item>
+    </style>
+
+     <style name="user_details_parent_item">
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">wrap_content</item>
+     </style>
+    <style name="user_details_item_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_ebebeb</item>
+    </style>
+     <style name="user_details_item_left_text">
+         <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:textSize">16sp</item>
+         <item name="android:textColor">@color/color_313131</item>
+         <item name="android:paddingLeft">10dp</item>
+         <item name="android:layout_centerVertical">true</item>
+     </style>
+
+    <style name="user_details_item_right_text">
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:textSize">14sp</item>
+         <item name="android:textColor">@color/color_959595</item>
+         <item name="android:paddingTop">15dp</item>
+         <item name="android:gravity">right</item>
+         <item name="android:paddingBottom">15dp</item>
+         <item name="android:layout_marginRight">10dp</item>
+         <item name="android:layout_marginLeft">10dp</item>
+         <item name="android:layout_centerVertical">true</item>
+     </style>
+
+    <style name="user_details_right_image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/icon_arrow</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+     <style name="group_details_bottom_parent_item">
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:background">@color/color_ffffff</item>
+     </style>
+
+    <style name="group_details_bottom_left_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_313131</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="group_details_bottom_right_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/color_959595</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+</resources>

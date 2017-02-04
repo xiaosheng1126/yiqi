@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ebebeb"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/color_ffffff" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/group_details_bottom_left_text"
+            android:text="成员数量"/>
+
+        <ImageView
+            android:id="@+id/iv1"
+            style="@style/user_details_right_image"/>
+
+        <TextView
+            android:id="@+id/tvMemberCount"
+            android:layout_toRightOf="@id/tv1"
+            android:layout_toLeftOf="@id/iv1"
+            style="@style/group_details_bottom_right_text"/>
+
+        <View
+            android:layout_below="@id/tvMemberCount"
+           style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/group_details_bottom_left_text"
+            android:text="群主" />
+        <ImageView
+            android:id="@+id/iv2"
+            style="@style/user_details_right_image"/>
+        <TextView
+            android:id="@+id/tvGroupsName"
+            android:layout_toRightOf="@id/tv2"
+            android:layout_toLeftOf="@id/iv2"
+            style="@style/group_details_bottom_right_text"/>
+
+        <View
+            android:layout_below="@id/tvGroupsName"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llGroupName"
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/group_details_bottom_left_text"
+            android:text="群名称"/>
+
+        <ImageView
+            android:id="@+id/iv3"
+            style="@style/user_details_right_image"/>
+        <TextView
+            android:id="@+id/tvGroupName"
+            android:layout_toRightOf="@id/tv3"
+            android:layout_toLeftOf="@id/iv3"
+            style="@style/group_details_bottom_right_text"/>
+        <View
+            android:layout_below="@id/tvGroupName"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llQRCode"
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/group_details_bottom_left_text"
+            android:text="群二维码"/>
+        <ImageView
+            android:id="@+id/iv4"
+            style="@style/user_details_right_image"/>
+        <TextView
+            android:id="@+id/tvQrCode"
+            android:drawableRight="@mipmap/qr_code_icon"
+            android:layout_toRightOf="@id/tv4"
+            android:layout_toLeftOf="@id/iv4"
+            style="@style/group_details_bottom_right_text"/>
+        <View
+            android:layout_below="@id/tvQrCode"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llLookGroupMessage"
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/group_details_bottom_left_text"
+            android:text="群公告"/>
+        <ImageView
+            android:id="@+id/iv5"
+            style="@style/user_details_right_image"/>
+        <TextView
+            android:id="@+id/tvGroupPublic"
+            android:layout_toRightOf="@id/tv5"
+            android:layout_toLeftOf="@id/iv5"
+            style="@style/group_details_bottom_right_text"/>
+        <View
+            android:layout_below="@id/tvGroupPublic"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llGetMessage"
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv6"
+            style="@style/group_details_bottom_left_text"
+            android:text="同步聊天记录"/>
+        <ImageView
+            android:id="@+id/iv6"
+            style="@style/user_details_right_image"/>
+        <TextView
+            android:id="@+id/tvGetMessage"
+            android:layout_toRightOf="@id/tv6"
+            android:layout_toLeftOf="@id/iv6"
+            style="@style/group_details_bottom_right_text"/>
+        <View
+            android:layout_below="@id/tvGetMessage"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llDiagnosis"
+        style="@style/group_details_bottom_parent_item">
+
+        <TextView
+            android:id="@+id/tv7"
+            style="@style/group_details_bottom_left_text"
+            android:text="诊断"/>
+
+        <ImageView
+            android:id="@+id/iv7"
+            style="@style/user_details_right_image"/>
+
+        <TextView
+            android:id="@+id/tvDiagnosis"
+            android:layout_toRightOf="@id/tv7"
+            android:layout_toLeftOf="@id/iv7"
+            style="@style/group_details_bottom_right_text"/>
+
+        <View
+            android:layout_below="@id/tvDiagnosis"
+            style="@style/user_details_item_line"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvExit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="退出本群"
+        android:textColor="@color/color_ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

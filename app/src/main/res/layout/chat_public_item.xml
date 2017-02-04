@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/chat_item_style">
+
+    <TextView
+        android:text="11:23"
+        style="@style/chat_time_style"/>
+
+    <TextView
+        tools:text="上海好多好多好多好"
+        style="@style/chat_system_style"
+        android:id="@id/tvText"/>
+
+</RelativeLayout>

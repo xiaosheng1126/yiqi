@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_setting"
+    android:background="@color/color_ebebeb"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlVideoSet"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="20dp"
+        android:padding="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/color_313131"
+            android:text="设置视频录制时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvVideoTime"
+            android:layout_alignParentRight="true"
+            android:text="10秒"
+            android:drawablePadding="5dp"
+            android:textColor="@color/color_959595"
+            android:drawableRight="@mipmap/icon_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlAudioSet"
+        android:background="@color/color_ffffff"
+        android:padding="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/color_313131"
+            android:text="设置语音录制时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAudioTime"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:drawablePadding="5dp"
+            android:textColor="@color/color_959595"
+            android:drawableRight="@mipmap/icon_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:background="@color/color_ffffff"
+        android:padding="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/color_313131"
+            android:text="当前版本号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_alignParentRight="true"
+            android:text="V 1.0"
+            android:textColor="@color/color_959595"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvExit"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:text="退出登录"
+        android:gravity="center"
+        android:textColor="@color/color_ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/btn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

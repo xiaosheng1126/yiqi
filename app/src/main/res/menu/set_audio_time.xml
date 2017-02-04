@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/audio_20"
+        app:showAsAction="ifRoom|withText"
+        android:title="20秒"
+        android:visible="true"/>
+    <item
+        android:id="@+id/audio_40"
+        app:showAsAction="ifRoom|withText"
+        android:title="40秒"
+        android:visible="true"/>
+    <item
+        android:id="@+id/audio_60"
+        app:showAsAction="ifRoom|withText"
+        android:title="60秒"
+        android:visible="true"/>
+</menu>

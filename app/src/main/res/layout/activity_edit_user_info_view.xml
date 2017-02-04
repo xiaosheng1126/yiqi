@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_edit_layout"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        android:paddingLeft="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:src="@mipmap/icon_14_clean" />
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/ivClear"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="#313131"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/commonTitle"
+        android:id="@+id/ll_select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSelectMan"
+            android:text="男"
+            android:textColor="#313131"
+            android:background="@color/color_ffffff"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/tvSelectWomen"
+            android:text="女"
+            android:textColor="#313131"
+            android:background="@color/color_ffffff"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/radio_20_sel"
+            android:padding="10dp" />
+    </LinearLayout>
+</RelativeLayout>

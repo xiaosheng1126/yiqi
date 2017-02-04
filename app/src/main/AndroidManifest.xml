@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hong.bo.shi">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 一起app自定义的Application -->
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="345e48018cd8b97a91c152f6038885bf" />
+
+        <activity
+            android:name=".ui.activitys.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.activitys.WelecomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activitys.LoginActivity" />
+
+        <!-- launchMode="singleTop"防止网页快速点击 -->
+        <activity
+            android:name=".ui.activitys.WebViewActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.activitys.UserDetailsActivity" />
+        <activity
+            android:name=".ui.activitys.ChatActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".qcode.CaptureActivity" />
+        <activity android:name=".ui.activitys.GroupDetailsActivity" />
+        <activity android:name=".ui.activitys.SelectContractActivity" />
+        <activity android:name=".ui.activitys.EditUserInfoActivity" />
+        <activity android:name=".ui.activitys.EditPassActivity" />
+        <activity android:name=".ui.activitys.SettingActivity" />
+        <activity android:name=".ui.activitys.RecorderVideoActivity" />
+        <activity android:name=".ui.activitys.SearchMessageActivity" />
+        <activity android:name=".ui.activitys.SearchContractActivity" />
+        <activity android:name=".ui.activitys.PicturePreviewActivity" />
+        <activity android:name=".ui.activitys.LocationActivity" />
+
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".ui.activitys.ShowLocationActivity" />
+        <activity
+            android:name=".ui.activitys.PlayMovieActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.activitys.KickedActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_Transparent" />
+        <activity android:name=".ui.activitys.EditUserPhotoActivity" />
+        <activity android:name=".ui.activitys.PictrueBrowseActivity" />
+        <activity android:name=".ui.activitys.FeebackActivity" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name=".ui.activitys.ForwardActivity" />
+        <activity android:name=".ui.activitys.EditGroupInfoActivity"></activity>
+    </application>
+
+</manifest>

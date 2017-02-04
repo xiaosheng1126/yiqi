@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/chat_item_style">
+
+    <TextView
+        style="@style/chat_time_style"
+        android:text="12:30" />
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        style="@style/chat_photo_style_right" />
+
+    <TextView
+        style="@style/chat_item_name_right"
+        tools:text="张三" />
+
+    <RelativeLayout
+        android:id="@id/rlItem"
+        style="@style/chat_pic_content_style_right">
+        <com.hong.bo.shi.widget.fresco.ImageDraweeView
+            style="@style/chat_pic_style"
+            android:paddingLeft="1dp"/>
+        <FrameLayout
+            android:id="@+id/pb"
+            android:background="#32000000"
+            android:layout_width="100dp"
+            android:layout_height="130dp">
+            <ProgressBar
+                android:layout_gravity="center"
+                style="@style/chat_pb_style"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tvName"
+        android:layout_toLeftOf="@id/rlItem">
+        <ImageView
+            android:id="@+id/ivAgainSend"
+            style="@style/chat_resend_style"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible" />
+    </FrameLayout>
+</RelativeLayout>

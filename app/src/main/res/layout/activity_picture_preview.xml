@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <me.relex.photodraweeview.PhotoDraweeView
+        android:id="@+id/photoView"
+        app:failureImage="@mipmap/default_pic"
+        app:failureImageScaleType="centerInside"
+        app:placeholderImageScaleType="fitCenter"
+        app:progressBarAutoRotateInterval="1000"
+        app:progressBarImage="@mipmap/progress_loading"
+        app:progressBarImageScaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

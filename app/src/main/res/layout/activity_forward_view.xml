@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        android:background="@color/color_1E90FF">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            android:drawablePadding="3dp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@mipmap/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.hong.bo.shi.widget.SegmentControl
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segment_control"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            app:block_direction="horizon"
+            app:selectedColor="@color/color_ffffff"
+            app:normalColor="@color/color_1E90FF"
+            app:cornerRadius="3dp"
+            app:separatorWidth="0.5dp"
+            app:boundWidth="1dp"
+            app:texts="群|本地|云端"
+            app:verticalGap="10dp"
+            app:horizonGap="10dp"/>
+
+        <TextView
+            android:id="@+id/tvFinish"
+            android:text="转发"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_toLeftOf="@id/tvFinish"
+            android:src="@drawable/search_sel"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingLeft="5dp"
+        android:background="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ExpandableListView
+            android:id="@+id/localExpandableListView"
+            android:cacheColorHint="#00000000"
+            android:listSelector="#00000000"
+            android:dividerHeight="1dp"
+            android:childDivider="@color/color_f5f5f5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ExpandableListView
+            android:id="@+id/clondExpandableListView"
+            android:cacheColorHint="#00000000"
+            android:listSelector="#00000000"
+            android:dividerHeight="1dp"
+            android:childDivider="@color/color_f5f5f5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        android:id="@id/ivPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/photo_image_style"/>
+
+    <ImageView
+        android:id="@+id/ivPersionIcon"
+        android:layout_toRightOf="@id/ivPhoto"
+        android:layout_marginLeft="-10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/yun_100"/>
+
+    <TextView
+        android:id="@id/tvName"
+        android:layout_toRightOf="@+id/ivPhoto"
+        tools:text="张三"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_313131"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+        <ImageView
+            android:id="@+id/iv_start5"
+            android:src="@mipmap/start1"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:id="@+id/iv_start4"
+            android:src="@mipmap/start1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:id="@+id/iv_start3"
+            android:src="@mipmap/start1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:id="@+id/iv_start2"
+            android:src="@mipmap/start1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:id="@+id/iv_start1"
+            android:src="@mipmap/start1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:id="@id/ivSelect"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/radio_20_nor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ebebeb"
+        android:layout_alignLeft="@+id/tvName"
+        android:layout_below="@id/ivPhoto"/>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+
+    <FrameLayout
+        android:layout_below="@id/commonTitle"
+        android:background="@color/color_000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <me.relex.photodraweeview.PhotoDraweeView
+            android:id="@+id/photoView"
+            app:failureImage="@mipmap/default_pic"
+            app:failureImageScaleType="centerInside"
+            app:placeholderImage="@mipmap/default_pic"
+            app:placeholderImageScaleType="fitCenter"
+            app:progressBarAutoRotateInterval="1000"
+            app:progressBarImage="@mipmap/progress_loading"
+            app:progressBarImageScaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</RelativeLayout>

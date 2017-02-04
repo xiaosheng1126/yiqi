@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+    <FrameLayout
+        android:id="@+id/capture_preview"
+        android:layout_below="@id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_below="@id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/scan_bg" />
+
+    <!--取景框-->
+    <FrameLayout
+        android:layout_below="@id/commonTitle"
+        android:layout_width="265dp"
+        android:layout_height="245dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp">
+
+        <ImageView
+            android:id="@+id/capture_crop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/scan_lightline"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_below="@id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="将二维码对准方形扫描框内"
+        android:textColor="@color/color_ffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

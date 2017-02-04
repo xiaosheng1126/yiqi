@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_below="@id/ivIcon"
+        android:textSize="13sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color_ffffff"
+        android:layout_marginTop="6dp"
+        android:text="协秘书"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvUnReadCount"
+        android:layout_toRightOf="@id/ivIcon"
+        android:background="@drawable/un_read_bg"
+        android:textColor="@color/color_ffffff"
+        android:textSize="10sp"
+        android:text="1"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+</RelativeLayout>

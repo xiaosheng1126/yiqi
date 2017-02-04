@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/chat_item_style">
+
+    <TextView
+        tools:text="12:34"
+        style="@style/chat_time_style"/>
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        style="@style/chat_photo_style_left"/>
+
+    <TextView
+        style="@style/chat_item_name_left"
+        tools:text="张三"/>
+
+    <RelativeLayout
+        style="@style/chat_text_content_style_left">
+        <TextView
+            tools:text="dhhdhdhdhdhdhdhhd"
+            style="@style/chat_text_style" />
+    </RelativeLayout>
+
+</RelativeLayout>

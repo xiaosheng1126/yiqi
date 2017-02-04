@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_copy"
+        app:showAsAction="ifRoom|withText"
+        android:title="复制文本"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/forward"
+        app:showAsAction="ifRoom|withText"
+        android:title="转发"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/item_delete"
+        app:showAsAction="ifRoom|withText"
+        android:title="删除"
+        android:visible="true"/>
+</menu>

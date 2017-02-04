@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/chat_item_style">
+
+    <TextView
+        style="@style/chat_time_style"
+        tools:text="12:34" />
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        style="@style/chat_photo_style_left" />
+
+    <TextView
+        style="@style/chat_item_name_left"
+        tools:text="张三" />
+
+    <RelativeLayout
+        style="@style/chat_audio_style_left">
+        <FrameLayout
+            android:id="@+id/itemAudio"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/chat_receive_item_sel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/view"
+                android:layout_gravity="left"
+                android:background="@mipmap/icon_16_soundwave_g"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+        </FrameLayout>
+        <TextView
+            android:layout_toRightOf="@id/itemAudio"
+            android:id="@+id/tvLongTime"
+            android:text="10'"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

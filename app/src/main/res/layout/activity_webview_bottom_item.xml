@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingBottom="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        android:id="@+id/ivIcon"
+        android:src="@mipmap/message_nor"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        style="@style/base_image_style"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_below="@id/ivIcon"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

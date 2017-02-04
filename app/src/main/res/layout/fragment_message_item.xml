@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="5dp"
+    android:background="@color/color_ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+     <FrameLayout
+         android:id="@+id/photoLayout"
+         android:layout_marginLeft="5dp"
+         android:layout_width="50dp"
+         android:layout_height="50dp">
+
+         <com.hong.bo.shi.widget.fresco.ImageDraweeView
+             android:id="@+id/ivSingle"
+             android:visibility="gone"
+             style="@style/image_round_4dp"
+             android:layout_gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+
+         <RelativeLayout
+             android:id="@+id/rlMulti"
+             android:background="@android:color/white"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <com.hong.bo.shi.widget.fresco.ImageDraweeView
+                 android:id="@+id/ivIcon_1"
+                 style="@style/image_round_2dp"
+                 android:layout_width="24.5dp"
+                 android:layout_height="24.5dp" />
+             <com.hong.bo.shi.widget.fresco.ImageDraweeView
+                 android:id="@+id/ivIcon_2"
+                 android:layout_toRightOf="@id/ivIcon_1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginLeft="1dp"
+                 style="@style/image_round_2dp"
+                 android:layout_width="24.5dp"
+                 android:layout_height="24.5dp" />
+             <com.hong.bo.shi.widget.fresco.ImageDraweeView
+                 android:id="@+id/ivIcon_3"
+                 android:layout_below="@id/ivIcon_2"
+                 android:layout_marginTop="1dp"
+                 style="@style/image_round_2dp"
+                 android:layout_width="24.5dp"
+                 android:layout_height="24.5dp" />
+             <com.hong.bo.shi.widget.fresco.ImageDraweeView
+                 android:id="@+id/ivIcon_4"
+                 android:layout_toRightOf="@+id/ivIcon_3"
+                 android:layout_marginLeft="1dp"
+                 style="@style/image_round_2dp"
+                 android:layout_alignTop="@+id/ivIcon_3"
+                 android:layout_width="24.5dp"
+                 android:layout_height="24.5dp" />
+         </RelativeLayout>
+     </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvUnReadCount"
+        android:layout_toRightOf="@id/photoLayout"
+        android:layout_marginLeft="-10dp"
+        android:gravity="center"
+        android:textColor="@color/color_ffffff"
+        android:textSize="10sp"
+        android:background="@drawable/un_read_bg"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/color_c2c2c2"
+        android:text="2015:12:23 12:23:12"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivGroupIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignRight="@id/tvTime"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tvTime"
+        android:src="@mipmap/group_100"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/color_313131"
+        android:textSize="14sp"
+        android:text="shhdhdhhdhdhddhd"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/photoLayout"
+        android:layout_toLeftOf="@id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_marginTop="3dp"
+        android:singleLine="true"
+        android:textColor="@color/color_959595"
+        android:textSize="14sp"
+        android:text="shhdhdhhdhdhddhd"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tvName"
+        android:layout_toLeftOf="@id/ivGroupIcon"
+        android:layout_toRightOf="@id/photoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_below="@id/photoLayout"
+        android:background="@color/color_f5f5f5"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</RelativeLayout>

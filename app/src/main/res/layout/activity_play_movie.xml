@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/commonTitle" />
+
+    <RelativeLayout
+        android:id="@+id/rlControl"
+        android:background="@android:color/transparent"
+        android:padding="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/stop"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+         <TextView
+             android:id="@+id/tvFinish"
+             android:layout_alignParentRight="true"
+             android:textSize="16sp"
+             android:padding="10dp"
+             android:textColor="@color/color_ffffff"
+             android:text="发送"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivControl"
+                android:src="@mipmap/pause"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPlayTime"
+                android:text="00:00"
+                android:textColor="@color/color_ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:max="100"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_weight="1"
+                android:layout_height="2dp" />
+
+            <TextView
+                android:id="@+id/tvCountTime"
+                android:text="00:10"
+                android:textColor="@color/color_ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/pb"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/video_play" />
+    </RelativeLayout>
+</FrameLayout>

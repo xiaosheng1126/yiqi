@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <RelativeLayout
+               android:id="@+id/rlPhoto"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv1"
+                   android:text="头像"
+                   style="@style/user_details_item_left_text"/>
+
+               <ImageView
+                   android:id="@+id/ivPersionIcon"
+                   android:layout_alignParentRight="true"
+                   android:src="@mipmap/yun_100"
+                   android:layout_marginRight="10dp"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp" />
+
+               <ImageView
+                   android:id="@+id/iv"
+                   style="@style/user_details_right_image"/>
+
+               <com.hong.bo.shi.widget.fresco.ImageDraweeView
+                   android:id="@+id/ivPhoto"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:layout_toLeftOf="@id/ivPersionIcon"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="-10dp"
+                   android:layout_marginBottom="10dp"
+                   style="@style/image_round_4dp"/>
+
+               <View
+                   android:layout_below="@id/ivPhoto"
+                  style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlName"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv2"
+                   android:text="姓名"
+                   style="@style/user_details_item_left_text" />
+
+               <ImageView
+                   android:id="@+id/iv2"
+                   style="@style/user_details_right_image"/>
+
+               <TextView
+                   android:id="@+id/tvName"
+                   android:layout_toRightOf="@id/tv2"
+                   android:layout_toLeftOf="@id/iv2"
+                   style="@style/user_details_item_right_text"/>
+
+               <View
+                   android:layout_below="@id/tvName"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+
+           <RelativeLayout
+               android:id="@+id/rlAccount"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv3"
+                   android:text="账号"
+                   style="@style/user_details_item_left_text"/>
+
+               <ImageView
+                   android:id="@+id/iv3"
+                   style="@style/user_details_right_image"/>
+
+               <TextView
+                   android:id="@+id/tvAccount"
+                   android:layout_toRightOf="@id/tv3"
+                   android:layout_toLeftOf="@id/iv3"
+                   style="@style/user_details_item_right_text" />
+
+               <View
+                   android:layout_below="@id/tvAccount"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlQRCode"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv4"
+                   android:text="二维码"
+                   style="@style/user_details_item_left_text"/>
+
+               <ImageView
+                   android:id="@+id/iv4"
+                   style="@style/user_details_right_image"/>
+
+               <TextView
+                   android:id="@+id/tvQRCode"
+                   android:drawableRight="@mipmap/qr_code_icon"
+                   android:layout_toRightOf="@id/tv4"
+                   android:layout_toLeftOf="@id/iv4"
+                   style="@style/user_details_item_right_text"/>
+
+               <View
+                   android:layout_below="@id/tvQRCode"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlSex"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv5"
+                   android:text="性别"
+                   style="@style/user_details_item_left_text"/>
+
+               <ImageView
+                   android:id="@+id/iv5"
+                   style="@style/user_details_right_image"/>
+
+               <TextView
+                   android:id="@+id/tvSex"
+                   android:layout_toRightOf="@id/tv5"
+                   android:layout_toLeftOf="@id/iv5"
+                   style="@style/user_details_item_right_text"/>
+
+               <View
+                   android:layout_below="@id/tvSex"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlRating"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv6"
+                   style="@style/user_details_item_left_text"
+                   android:text="专家星级" />
+
+               <LinearLayout
+                   android:id="@+id/rating_bar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:orientation="horizontal"
+                   android:paddingBottom="15dp"
+                   android:paddingRight="10dp"
+                   android:paddingTop="15dp">
+                   <ImageView
+                       android:id="@+id/iv_start5"
+                       android:src="@mipmap/start1"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp" />
+                   <ImageView
+                       android:id="@+id/iv_start4"
+                       android:src="@mipmap/start1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp" />
+                   <ImageView
+                       android:id="@+id/iv_start3"
+                       android:src="@mipmap/start1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp" />
+                   <ImageView
+                       android:id="@+id/iv_start2"
+                       android:src="@mipmap/start1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp" />
+                   <ImageView
+                       android:id="@+id/iv_start1"
+                       android:src="@mipmap/start1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp" />
+               </LinearLayout>
+
+               <View
+                   style="@style/user_details_item_line"
+                   android:layout_below="@id/rating_bar"/>
+
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlMobile"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv7"
+                   android:text="手机号码"
+                   style="@style/user_details_item_left_text"/>
+               <ImageView
+                   android:id="@+id/iv7"
+                   style="@style/user_details_right_image"/>
+               <TextView
+                   android:id="@+id/tvMobile"
+                   android:layout_toRightOf="@id/tv7"
+                   android:layout_toLeftOf="@id/iv7"
+                   style="@style/user_details_item_right_text" />
+
+               <View
+                   android:layout_below="@id/tvMobile"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rlCompany"
+               style="@style/user_details_parent_item">
+
+               <TextView
+                   android:id="@+id/tv8"
+                   android:text="公司"
+                   style="@style/user_details_item_left_text"/>
+
+               <ImageView
+                   android:id="@+id/iv8"
+                   style="@style/user_details_right_image"/>
+
+               <TextView
+                   android:id="@+id/tvCompany"
+                   android:layout_toRightOf="@id/tv8"
+                   android:layout_toLeftOf="@id/iv8"
+                   style="@style/user_details_item_right_text" />
+
+               <View
+                   android:layout_below="@id/tvCompany"
+                   style="@style/user_details_item_line"/>
+           </RelativeLayout>
+       </LinearLayout>
+   </ScrollView>
+    <FrameLayout
+        android:id="@+id/bottomLayout"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvCreateChat"
+            android:gravity="center"
+            android:text="创建会话"
+            android:textSize="18sp"
+            android:textColor="@color/color_ffffff"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_bg"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_recorder_audio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.recorder.MovieRecorderView
+        android:id="@+id/movie_recorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:background="#33000000"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:text="取消"
+            android:textColor="@color/color_ffffff"
+            android:padding="13dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <TextView
+            android:id="@+id/tvStart"
+            android:text="开始"
+            android:padding="13dp"
+            android:textColor="@color/color_ffffff"
+            android:layout_gravity="center|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"/>
+
+        <TextView
+            android:id="@+id/tvFinish"
+            android:text="完成"
+            android:textColor="@color/color_ffffff"
+            android:padding="13dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        android:id="@+id/ivAvaturl"
+        android:layout_marginTop="20dp"
+        style="@style/image_round_4dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="85dp"
+        android:layout_height="85dp"/>
+    
+    <EditText
+        android:id="@+id/etAccount"
+        android:singleLine="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/transparent"
+        android:hint="请输入账号或手机号"
+        android:textColor="@color/color_1E90FF"
+        android:textColorHint="@color/color_c2c2c2"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <View
+        android:background="#e8e6ec"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <EditText
+        android:id="@+id/etPass"
+        android:singleLine="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="请输入密码"
+        android:password="true"
+        android:textColor="@color/color_1E90FF"
+        android:textColorHint="@color/color_c2c2c2"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <View
+        android:background="#e8e6ec"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:gravity="center"
+        android:text="登录"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/color_ffffff"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color_959595"
+        android:text="南京燚麒智能科技有限公司\n
+Nanjing Yi Qi Smart Technology Co. Ltd"/>
+
+    <FrameLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvForgetPass"
+            android:text="找回密码"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/color_3399ff"
+            android:layout_gravity="left|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:text="新用户注册"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/color_3399ff"
+            android:layout_gravity="right|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

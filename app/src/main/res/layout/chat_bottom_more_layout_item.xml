@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/flOperation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/add_bg">
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/video_g" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:text="sssssss"
+        android:textColor="#313131"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

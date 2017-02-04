@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">一起</string>
+    <string name="str_recordering_normal">按住 说话</string>
+    <string name="str_recording">松开 结束</string>
+    <string name="str_want_to_cancel">松开手指 取消录音</string>
+    <string name="ac_select_contacts_ok">确定</string>
+    <string name="ac_select_contacts_cancel">取消</string>
+    <string name="ac_select_contacts_ok_count">确定(%1$d)</string>
+
+    <string name="putao_cancel">取消</string>
+    <string name="putao_camera">相机</string>
+    <string name="putao_call_mobile">拨打电话</string>
+    <string name="putao_send_message">发送短信</string>
+    <string name="putao_album">从相册选择</string>
+    <string name="map_baidu">百度地图</string>
+    <string name="map_gaode">高德地图</string>
+
+    <!--ChatActivity-->
+    <string name="ac_chat_left_title">消息</string>
+    <string name="ac_chat_send">发送</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_forward"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.hong.bo.shi.ui.view.ForwardView
+        android:id="@+id/forward_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

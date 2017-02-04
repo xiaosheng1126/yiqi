@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/chat_iv_audio"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/chat_voice_btn"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <EditText
+            android:id="@+id/chat_et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_input_text_bg"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/color_313131"
+            android:maxLines="5"
+            android:padding="5dp"
+            tools:text="张三"
+            android:minHeight="32dp"
+            android:textSize="14sp" />
+
+        <com.hong.bo.shi.recorder.AudioRecorderButton
+            android:id="@+id/audioRecorderButn"
+            android:text="@string/str_recordering_normal"
+            android:textColor="#727272"
+            android:background="@drawable/btn_recorder_normal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/chat_iv_emoji"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/chat_emoji_btn" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="8dp">
+
+        <TextView
+            android:id="@+id/chat_tv_send"
+            android:minWidth="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:text="@string/ac_chat_send"
+            android:textColor="@color/color_ffffff"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/chat_iv_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/chat_add_btn" />
+    </FrameLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_ebebeb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hong.bo.shi.widget.CommonTitle
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:padding="10dp"
+        android:background="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <com.hong.bo.shi.widget.fresco.ImageDraweeView
+            android:id="@+id/ivPhoto"
+            style="@style/image_round_4dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_toRightOf="@id/ivPhoto"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/color_313131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivGender"
+            android:layout_below="@id/tvName"
+            android:src="@mipmap/icon_24_gender_m"
+            android:layout_alignLeft="@id/tvName"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_arrow"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvEditPass"
+        android:background="@color/color_ffffff"
+        android:text="修改密码"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_313131"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:drawableRight="@mipmap/icon_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:background="@color/color_ffffff"
+        android:text="问题反馈"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/color_313131"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:drawableRight="@mipmap/icon_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvSetting"
+        android:background="@color/color_ffffff"
+        android:text="设置"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/color_313131"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:drawableRight="@mipmap/icon_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

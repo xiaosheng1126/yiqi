@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerView" type="id" />
+    <item name="ivPhoto" type="id" />
+    <item name="tvName" type="id" />
+    <item name="divider" type="id" />
+    <item name="ivSelect" type="id" />
+    <item name="tvTime" type="id" />
+    <item name="rlItem" type="id" />
+    <item name="ivPic" type="id" />
+    <item name="tvText" type="id" />
+    <item name="tvCount" type="id" />
+    <item name="pb" type="id" />
+
+    <item name="open_camera" type="id"/>
+    <item name="open_album" type="id"/>
+    <item name="call_mobile" type="id"/>
+    <item name="send_message" type="id"/>
+    <item name="map_baidu" type="id"/>
+    <item name="map_gaode" type="id"/>
+
+</resources>

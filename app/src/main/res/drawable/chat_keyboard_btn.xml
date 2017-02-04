@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/btn_32_chat_keyboard_sel"
+        android:state_pressed="true"/>
+    <item
+        android:drawable="@mipmap/btn_32_chat_keyboard_nor"/>
+</selector>

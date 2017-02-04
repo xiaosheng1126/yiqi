@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/chat_item_style">
+
+    <TextView
+        style="@style/chat_time_style"
+        tools:text="12:34" />
+
+    <com.hong.bo.shi.widget.fresco.ImageDraweeView
+        style="@style/chat_photo_style_right" />
+
+    <TextView
+        style="@style/chat_item_name_right"
+        tools:text="张三" />
+
+    <LinearLayout
+        style="@style/chat_item_send">
+        <FrameLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                style="@style/chat_pb_style" />
+
+            <ImageView
+                android:id="@+id/ivAgainSend"
+                style="@style/chat_resend_style"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            style="@style/chat_text_content_style_right">
+            <TextView style="@style/chat_text_style"
+                tools:text="dhdhd"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
