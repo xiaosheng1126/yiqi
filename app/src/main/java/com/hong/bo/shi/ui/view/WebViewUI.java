@@ -33,8 +33,6 @@ import com.hong.bo.shi.widget.CommonTitle;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.hong.bo.shi.R.id.webView;
-
 /**
  * Created by andy on 2016/12/12.
  */
@@ -70,7 +68,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
     @Override
     protected void initView() {
         mFailView = findViewByIds(R.id.fail_view);
-        mWebView = findViewByIds(webView);
+        mWebView = findViewByIds(R.id.webView);
         mCommonTitle = findViewByIds(R.id.commonTitle);
         mCommonTitle.setOnLeftClickListener((CommonTitle.OnLeftClickListener) mContext);
         WebViewUtils.setWebView(mWebView, this);
@@ -86,7 +84,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
 
     @Override
     public void onClick(View v) {
-        mWebView.loadUrl(mUrl);
+        WebViewUtils.loadUrl(mWebView, mUrl);
         showLoading();
         mWebView.setVisibility(VISIBLE);
         mFailView.setVisibility(GONE);
@@ -95,7 +93,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
     @Override
     public void initData(WebBean bean) {
         updateTitle(bean);
-        mWebView.loadUrl(bean.getUrl());
+        WebViewUtils.loadUrl(mWebView, bean.getUrl());
     }
 
     @Override
@@ -127,9 +125,11 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
         if(mWebBean.isShowBack()){
             return true;
         }
-        String format = String.format("javascript:gotoRelativePage('%s')",
-                mWebBean.getPagerUrl());
-        mWebView.loadUrl(format);
+        if(!App.getInstance().isNetworkAvailable()){
+            return true;
+        }
+        String format = String.format("javascript:gotoRelativePage('%s')", mWebBean.getPagerUrl());
+        WebViewUtils.loadUrl(mWebView, format);
         return false;
     }
 
@@ -137,7 +137,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
     public void onCheckSelect(int position) {
         BottomBean item = mAdapter.getItem(position);
         if(item.getType().equals("0")){
-            mWebView.loadUrl(item.getExtra());
+            WebViewUtils.loadUrl(mWebView, item.getExtra());
         }else if(item.getType().equals("1")){//跳转到会话界面
             GroupInfo groupInfo = RealmHelper.getGroupInfo(item.getExtra());
             if(groupInfo == null){
@@ -147,7 +147,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
                 UIHelper.showChat(mContext, mWebBean.getTitle(), groupInfo);
                 mAdapter.setSelectPosition(0);
                 BottomBean bean = mAdapter.getItem(0);
-                mWebView.loadUrl(bean.getExtra());
+                WebViewUtils.loadUrl(mWebView, item.getExtra());
             }
         }
     }
@@ -157,7 +157,7 @@ public class WebViewUI extends RootView<WebViewContract.Presenter> implements We
         if(mWebBean != null){
             updateTitle(mWebBean);
         }
-        view.loadUrl(url);
+        WebViewUtils.loadUrl(view, url);
         return true;
     }
 

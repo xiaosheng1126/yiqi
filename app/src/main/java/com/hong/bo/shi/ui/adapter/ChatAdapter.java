@@ -1,12 +1,10 @@
 package com.hong.bo.shi.ui.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.PopupMenu;
-import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,14 +26,12 @@ import com.hong.bo.shi.download.DownloadManager;
 import com.hong.bo.shi.model.bean.GroupMessage;
 import com.hong.bo.shi.presenter.contract.ChatContract;
 import com.hong.bo.shi.recorder.MediaManager;
-import com.hong.bo.shi.ui.activitys.ForwardActivity;
 import com.hong.bo.shi.utils.DateUtils;
 import com.hong.bo.shi.utils.EmojiUtils;
 import com.hong.bo.shi.utils.SystemUtils;
 import com.hong.bo.shi.utils.UIHelper;
 import com.hong.bo.shi.widget.fresco.ImageDraweeView;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +44,7 @@ import static android.content.Context.WINDOW_SERVICE;
 public class ChatAdapter extends BaseAdapter implements ChatMsgType {
 
     private List<GroupMessage> mData;
-    private String mMeGuid = App.getInstance().getUserInfo().getGuid();
+    private String mMeGuid;
     private Context mContext;
     private View mAnimView;
     private boolean isSend;
@@ -63,6 +59,7 @@ public class ChatAdapter extends BaseAdapter implements ChatMsgType {
 
     public ChatAdapter() {
         this.mData = new ArrayList<>();
+        mMeGuid = App.getInstance().getUserInfo().getGuid();
     }
 
     public void add(GroupMessage message) {
@@ -460,8 +457,7 @@ public class ChatAdapter extends BaseAdapter implements ChatMsgType {
                                 SystemUtils.copyText(mContext, message.getMessage());
                                 break;
                             case R.id.forward:
-                                Intent intent = new Intent(mContext, ForwardActivity.class);
-                                mContext.startActivity(intent);
+                                UIHelper.forward(mContext, message.getGuid());
                                 break;
                         }
                         return true;
@@ -469,19 +465,4 @@ public class ChatAdapter extends BaseAdapter implements ChatMsgType {
                 });
         mDialog.show();
     }
-
-
-    private boolean fileIsExits(String filePath){
-        if (!TextUtils.isEmpty(filePath)) {
-            File file = new File(filePath);
-            if (file.exists() && file.length() > 0) {
-               return true;
-            } else {
-                return false;
-            }
-        }
-        return false;
-    }
-
-
 }

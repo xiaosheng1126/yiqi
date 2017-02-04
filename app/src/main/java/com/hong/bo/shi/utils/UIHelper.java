@@ -18,6 +18,7 @@ import com.hong.bo.shi.ui.activitys.EditGroupInfoActivity;
 import com.hong.bo.shi.ui.activitys.EditPassActivity;
 import com.hong.bo.shi.ui.activitys.EditUserInfoActivity;
 import com.hong.bo.shi.ui.activitys.EditUserPhotoActivity;
+import com.hong.bo.shi.ui.activitys.ForwardActivity;
 import com.hong.bo.shi.ui.activitys.KickedActivity;
 import com.hong.bo.shi.ui.activitys.LocationActivity;
 import com.hong.bo.shi.ui.activitys.LoginActivity;
@@ -279,5 +280,11 @@ public class UIHelper {
         intent.putExtra(Constants.Key.PATH, path);
         intent.putExtra(Constants.Key.TYPE, 0);
         ((BaseActivity)context).startActivityForResult(intent, Constants.REQUEST_VIDEO_CODE);
+    }
+
+    public static void forward(Context context, String msgGuid){
+        Intent intent = new Intent(context, ForwardActivity.class);
+        intent.putExtra(Constants.Key.GUID, msgGuid);
+        context.startActivity(intent);
     }
 }

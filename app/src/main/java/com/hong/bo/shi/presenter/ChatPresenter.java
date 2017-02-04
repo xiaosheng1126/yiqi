@@ -186,7 +186,9 @@ public class ChatPresenter extends RxPresenter implements ChatContract.Presenter
                         if(!Constants.NO_MSG.equals(message)) {
                             GroupMessage groupMessage = new GroupMessage(guid, message);
                             list.add(groupMessage);
-                            DownloadManager.getRequestQueue().add(groupMessage);
+                            if(groupMessage.getMsgType() == 3) {
+                                DownloadManager.getRequestQueue().add(groupMessage);
+                            }
                         }
                     }
                     if(list.size() > 0) {

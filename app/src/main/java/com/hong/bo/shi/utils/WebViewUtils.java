@@ -16,6 +16,15 @@ import com.hong.bo.shi.model.bean.WebBean;
 
 public class WebViewUtils {
 
+    public static void loadUrl(WebView webView, String url){
+        WebSettings webSettings = webView.getSettings();
+        if(App.getInstance().isNetworkAvailable()){
+            webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);//缓存模式
+        }else {
+            webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//缓存模式
+        }
+        webView.loadUrl(url);
+    }
     public static void setWebView(WebView webView, final WebClientListener listener){
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);

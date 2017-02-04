@@ -38,6 +38,7 @@ public final class RequestUrl {
         public static final String TYPE_1025 = "1025";//获取指定群所有的聊天信息的type
         public static final String TYPE_1030 = "1030";//获取群诊断信息的type
         public static final String TYPE_1026 = "1026";//获取指定群的联系人信息type
+        public static final String TYPE_1032 = "1032";//转发信息的type
     }
 
     /**云端基类url*/
@@ -225,6 +226,11 @@ public final class RequestUrl {
     public static String getType1026Url(String groupGuid){
         return String.format("%s?type=%s&17Intellu=%s&17Intellg=%s",
                 getLocalBaseUrl(), Type.TYPE_1026, getUserGuid(), groupGuid);
+    }
+
+    public static String getType1032Url(String msgGuid, String forwardGuids){
+        return String.format("%s?type=%s&17Intellu=%s&17Intellm=%s17Intellg=%s",
+                getLocalBaseUrl(), Type.TYPE_1032, getUserGuid(), msgGuid, forwardGuids);
     }
 
     /**

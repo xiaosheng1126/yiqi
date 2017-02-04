@@ -173,7 +173,9 @@ public class GroupDetailsPresenter extends RxPresenter implements GroupDetailsCo
             for (String message : split) {
                 GroupMessage groupMessage = new GroupMessage(mGroupGuid, message);
                 list.add(groupMessage);
-                DownloadManager.getRequestQueue().add(groupMessage);
+                if(groupMessage.getMsgType() == 3) {
+                    DownloadManager.getRequestQueue().add(groupMessage);
+                }
             }
             RealmHelper.updateMessage(list);
             return true;
